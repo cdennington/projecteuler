@@ -99,7 +99,26 @@
         }
         echo max($cart);
     }
-    q4();
+    #q4();
+    ?>
+    <h1>Question 5</h1>
+    <?php
+    function q5() {
+        function checkdivisible($m) {
+            if ($m%19 == 0 && $m%18 == 0 && $m%17 == 0 && $m%16 == 0 && $m%15 == 0 && $m%14 == 0 && $m%13 == 0 && $m%12 == 0 && $m%11 == 0 && $m%10 == 0 && $m%9 == 0 && $m%8 == 0 && $m%7 == 0 && $m%6 == 0 && $m%5 == 0 && $m%4 == 0 && $m%3 == 0 && $m%2 == 0 && $m%1 == 0) {
+                return True;
+            }
+            return False;
+        }
+        $i = 0;
+        while ($i <= 10000000000) {
+            if(checkdivisible($i)) {
+                echo($i. "<br />");
+            }
+            $i = $i + 20;
+        }
+    }
+    q5();
     ?>
 </body>
 </html>
