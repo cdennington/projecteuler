@@ -118,7 +118,34 @@
             $i = $i + 20;
         }
     }
-    q5();
+    #q5();
+    ?>
+    <h1>Question 6</h1>
+    <?php
+    function q6() {
+        $num_sq;
+        $num;
+        for ($i=1; $i<=100; $i++) {
+            $sum = $i * $i;
+            $num_sq = $sum + $num_sq;
+
+        }
+        #echo "and $num_sq\n";
+
+        
+        for ($i=1; $i<=100; $i++) {
+            $num = $num + $i;
+            #echo "and $num\n";
+        }
+        $sq_sum = $num * $num; 
+        #echo "and $sq_sum\n";
+
+        $final_sum = $sq_sum - $num_sq;
+
+        echo "and $final_sum\n";
+    }
+
+    q6();
     ?>
 </body>
 </html>
