@@ -74,7 +74,7 @@
             $x=(string)$x;
             $length = strlen($x);
             if($length <= 5 && $x[0] == $x[$length-1] && $x[1] == $x[$length-2]) {
-            echo($x."<br />");
+            #echo($x."<br />");
                 return True;
             }else if($length > 5 && $x[0] == $x[$length-1] && $x[1] == $x[$length-2] && $x[2] == $x[$length-3]) {
                 return True;
@@ -82,17 +82,22 @@
             return False;
         }
         $m = 999;
+        $i = 100;
+        $cart = array();
         for ($i=100; $i<=999; $i++) {
-            while ($m > 100) {
-                #echo($i."<br />");
+            while ($m >= 100) {
                 $answer = $i * $m;
-                #echo($answer."<br />");
-                m--;
+                #echo "$i times $m\n";
+                #echo($i. "multiply".$m."<br />");
+                $m--;
                 if(checkSize($answer)) {
-                    echo "and $answer is a palindrome\n";
+                    array_push($cart,$answer);
+                    #echo "and $cart is a palindrome\n";
                 }
             }
+            $m = 999;
         }
+        echo max($cart);
     }
     q4();
     ?>
