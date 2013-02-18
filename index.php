@@ -208,9 +208,30 @@
     <h1>Question 9</h1>
     <?php
     function q9() {
+        $k=0;        
+        
+        for($i=1;$i<1000;$i++){
+            for($j=$i+1;$j<999;$j++){
+                $k = sqrt($i*$i + $j*$j);
+                
+                if($i+$j+$k==1000 && $i<$j && $j<$k){
+                    if($i*$i+$j*$j==$k*$k) {
+                        echo "$i * $j * $k\n";
+                        echo $i*$j*$k;
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+    #q9();
+    ?>
+    <h1>Question 9</h1>
+    <?php
+    function q10() {
         
     }
-    q9();
+    q10();
     ?>
 </body>
 </html>
