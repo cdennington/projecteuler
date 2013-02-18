@@ -145,7 +145,31 @@
         echo "and $final_sum\n";
     }
 
-    q6();
+    #q6();
+    ?>
+    <h1>Question 7</h1>
+    <?php
+    function q7() {
+        $prime_numbers = array();
+        function isPrime($x) {
+            for($i=2; $i<$x; $i++) {
+                if($x%$i==0) {
+                    return False;
+                }
+            }
+            return True;
+        }
+        for($i=2; $result <= 10000; $i++) {
+            if(isPrime($i)) {
+                array_push($prime_numbers,$i);
+                #echo "and $i is prime\n";
+                $result = count($prime_numbers);
+                #echo "and $result\n";
+            }
+        }
+        echo "the 100001 prime number is $prime_numbers[10001]\n";
+    }
+    q7();
     ?>
 </body>
 </html>
