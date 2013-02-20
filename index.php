@@ -313,7 +313,53 @@
         $max = max($s);
         print_r($max);
     }
-    q11();
+    #q11();
+    ?>
+    <h1>Question 12</h1>
+    <?php
+    function q12() {
+        for ($i=12500; $i>=10000; $i--) {
+            $multiply = $i * ($i+1);
+            $divide = $multiply/2;
+            $d = 1;
+            $count = 0;
+            while($d < 1000000) {
+                if ($divide%$d == 0) {
+                    $count++;
+                    if ($count > 500) {
+                        echo "triangle number $divide\n";
+                        return;
+                    }
+                }
+                $d++;
+            }
+            #echo "finished $divide\n";
+        }
+    }
+    #q12();
+    ?>
+    <h1>Question 13</h1>
+    <?php
+    function q12() {
+        for ($i=12500; $i>=10000; $i--) {
+            $multiply = $i * ($i+1);
+            $divide = $multiply/2;
+            $d = 1;
+            $count = 0;
+            while($d < 1000000) {
+                if ($divide%$d == 0) {
+                    $count++;
+                    if ($count > 500) {
+                        echo "triangle number $divide\n";
+                        return;
+                    }
+                }
+                $d++;
+            }
+            #echo "finished $divide\n";
+        }
+    }
+    q13();
     ?>
 </body>
 </html>
