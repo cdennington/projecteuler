@@ -350,7 +350,34 @@
         $answer = substr($sum, 0, 11);
         print_r($answer);
     }
-    q13();
+    #q13();
+    ?>
+    <h1>Question 14</h1>
+    <?php
+    function q14() {
+        $counting = array();
+        for ($i=800000; $i<=999999; $i++) {
+            $count = 1;
+            #echo "$i\n";
+            $num_two = $i;
+            while ($num_two > 1) {
+                if ($num_two%2 == 0) {
+                    $num_two = $num_two/2;
+                    #echo "$i for $num_two\n";
+                }else{
+                    $num_two = 3*$num_two+1;
+                    #echo "$i for $num_two\n";
+                }
+                $count++;
+            }
+            array_push($counting,$count);
+        }
+        $max = max($counting);
+        #echo $max;
+        $num = array_search($max, $counting);
+        echo $num + 800000;
+    }
+    q14();
     ?>
 </body>
 </html>
