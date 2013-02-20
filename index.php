@@ -377,7 +377,35 @@
         $num = array_search($max, $counting);
         echo $num + 800000;
     }
-    q14();
+    #q14();
+    ?>
+    <h1>Question 15</h1>
+    <?php
+    function q15() {
+            $c = 1;
+            $final_num = 0;
+            $triangle = Array();
+            for($i=0;$i<=20;$i++){
+                $triangle[$i] = Array();
+                if(!isset($triangle[$i-1])){
+                    $triangle[$i][] = $c;
+                }else{
+                    for($j=0;$j<count($triangle[$i-1])+1;$j++){
+                        $triangle[$i][] = (isset($triangle[$i-1][$j-1]) && isset($triangle[$i-1][$j])) ? $triangle[$i-1][$j-1] + $triangle[$i-1][$j] : $c;
+                    }
+                }
+            }
+            print_r($triangle[20]);
+            $last_line = $triangle[20];
+            foreach($last_line as $val){
+                echo $val . ' ';
+                $sq = $val * $val;
+                echo "for $sq\n";
+                $final_num = $final_num + $sq;
+                echo "for $final_num\n";
+            }
+    }
+    q15();
     ?>
 </body>
 </html>
