@@ -405,7 +405,18 @@
                 echo "for $final_num\n";
             }
     }
-    q15();
+    #q15();
+    ?>
+    <h1>Question 16</h1>
+    <?php
+    function q16() {
+        $peck = pow(2, 1000);
+        $normal_number = number_format($peck, 0, '.', '');
+        $string = strval($normal_number);
+        echo "for $string\n";
+        echo array_sum(str_split($string));
+    }
+    q16();
     ?>
 </body>
 </html>
